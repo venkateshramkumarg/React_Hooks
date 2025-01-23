@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Hooks Collection
+
+A collection of custom React hooks for common use cases and functionality.
 
 ## Getting Started
 
@@ -20,6 +22,77 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Installation
+
+```bash
+npm install
+# or
+yarn install
+```
+
+## Usage
+
+Import the desired hooks from their respective files:
+
+```javascript
+import { useYourHook } from './hooks/useYourHook';
+```
+
+## Project Structure
+
+```
+/Hooks
+  ├── src/
+  │   └── hooks/
+  └── tests/
+```
+
+## Available Hooks
+
+### State Management Hooks
+- **useLocalStorage**: A hook for persisting state in localStorage while keeping it in sync with React state
+- **useToggle**: Manages boolean state with easy toggle functionality
+- **useCounter**: Manages numeric state with increment/decrement functionality
+
+### Effect & Lifecycle Hooks
+- **useMount**: Executes code only when component mounts
+- **useUpdateEffect**: Similar to useEffect but skips the first render
+- **useUnmount**: Executes cleanup code when component unmounts
+
+### Browser API Hooks
+- **useMediaQuery**: Responds to media query changes
+- **useGeolocation**: Manages browser geolocation API
+- **useOnline**: Tracks online/offline status
+
+### DOM Hooks
+- **useClickOutside**: Detects clicks outside a specified element
+- **useScrollPosition**: Tracks scroll position
+- **useWindowSize**: Monitors window dimensions
+
+### Form & Input Hooks
+- **useForm**: Manages form state and validation
+- **useInput**: Handles input field state and validation
+- **useDebounce**: Debounces input values
+
+### Performance Hooks
+- **useMemoCompare**: Memoization with custom comparison
+- **useThrottle**: Throttles function calls
+
+Each hook is documented with TypeScript types and includes examples in their respective files.
+
+## Usage Examples
+
+```javascript
+// Toggle Example
+const [isOn, toggle] = useToggle(false);
+
+// Local Storage Example
+const [value, setValue] = useLocalStorage('key', defaultValue);
+
+// Media Query Example
+const isDesktop = useMediaQuery('(min-width: 1024px)');
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,6 +101,20 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Dependencies
+
+- React
+- React DOM
+- Additional dependencies...
+
+## Contributing
+
+Feel free to contribute by creating pull requests or reporting issues.
+
+## License
+
+MIT License
 
 ## Deploy on Vercel
 
